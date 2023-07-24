@@ -7,21 +7,37 @@ body {
 }
 @layer components {
     .marquee {
-        animation: marquee 40s linear infinite;
+        animation: marquee 30s linear infinite;
     }
     .marquee-sm {
-        animation: marquee 20s linear infinite;
+        animation: marquee-sm 20s linear infinite;
     }
     .marquee-xs {
-        animation: marquee 10s linear infinite;
+        animation: marquee-xs 10s linear infinite;
     }
 }
 
+@keyframes marquee-xs {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-310%, 0);
+    }
+}
+@keyframes marquee-sm {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-185%, 0);
+    }
+}
 @keyframes marquee {
     0% {
         transform: translate(0, 0);
     }
     100% {
-        transform: translate(-100%, 0);
+        transform: translate(-125%, 0);
     }
 }
